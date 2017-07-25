@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="UIDAI">
+ <bannerLeft>
+    <name>UIDAI</name>
+    <src>http://uidai.gov.in/images/logo.png</src>
+    <href>http://uidai.gov.in/</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>http://uidai.gov.in/images/header2.jpg</src>
+  </bannerRight>
+  <body>
+    <menu name="Javadoc Reports">
+      <item name="${artifactId}" href="./apidocs/" />
+    </menu>
+  </body>
+</project>

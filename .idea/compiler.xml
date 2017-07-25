@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="uidai-auth-client" />
+        <module name="uidai-auth-proto-model" />
+        <module name="uidai-auth-xsd-model" />
+        <module name="uidai-biometric-integration-api" />
+        <module name="uidai-sample-gui-app" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-client-demo-application" target="1.5" />
+      <module name="uidai-auth-client" target="1.6" />
+      <module name="uidai-auth-proto-model" target="1.6" />
+      <module name="uidai-auth-xsd-model" target="1.6" />
+      <module name="uidai-biometric-integration-api" target="1.6" />
+      <module name="uidai-sample-gui-app" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

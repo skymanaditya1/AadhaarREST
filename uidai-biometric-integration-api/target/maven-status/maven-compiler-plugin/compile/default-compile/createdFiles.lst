@@ -1,0 +1,3 @@
+in/gov/uidai/auth/client/biometrics/BiometricIntegrationAPI.class
+in/gov/uidai/auth/client/biometrics/CaptureHandler.class
+in/gov/uidai/auth/client/biometrics/CaptureDetails.class

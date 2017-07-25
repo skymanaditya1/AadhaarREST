@@ -1,0 +1,67 @@
+
+==========================================================
+*** UID Authentication Client Reference Implementation ***
+==========================================================
+
+
+BUILD INSTRUCTIONS:
+------------------
+
+PRE-REQUISITES:
+
+1. JDK 1.6 Update 20 or Higher
+2. Maven 2.2.1 or Higher
+   a) Download Maven from http://www.apache.org/dyn/closer.cgi/maven/binaries/apache-maven-2.2.1-bin.zip
+   b) Unzip the zip file.
+   c) Add the "bin" folder of extracted zip file into PATH so that you can run "mvn" command from command line.
+   d) Test by running "mvn" from command line, you should see output like below:
+   D:\auth-client-workspace\release_1.2_bugfix\bundler>mvn -version
+         Apache Maven 2.2.1 (r788681; 2009-06-26 18:34:01+0530)
+         Java version: 1.6.0_20
+         Java home: C:\Program Files\Java\jdk1.6.0_20\jre
+         Default locale: en_US, platform encoding: Cp1252
+         OS name: "windows 7" version: "6.1" arch: "x86" Family: "windows"
+3. Protoc compiler for converting protobuf message templates into java source code.
+   For Windows, download protobuf compiler version http://protobuf.googlecode.com/files/protoc-2.4.1-win32.zip.
+   The zip file contains "protoc.exe", Place the "protoc.exe" in PATH.  Open a command prompt and run the command
+   "protoc --version".  You should see the version number listed as "libprotoc 2.4.1".
+
+   For Linux, you will have to build the "protoc" from source.
+   
+
+PROJECT DESCRIPTIONS:
+====================
+- uidai-auth-proto-model: This project contains Protobuf Message format and builds Java objects by using protoc compiler
+- uidai-auth-xsd-model: This project contains auth XSDs and builds JAXB objects by using xjc compiler
+- uidai-auth-client: This project code encryption related code, and code to submit requests to auth server.
+- uidai-sample-gui-app: This project contains a sample GUI application.
+- uidai-biometric-integration-api: This project defines an API that can be used to integrate with biometric device library.
+
+
+BUILDING FROM SOURCE:
+=====================
+  	 
+1. Run "mvn clean package -DskipTests" from directory UID_CLIENT_PROJECT_HOME (where you unzipped source code).
+
+2. To develop code in Eclipse, perform following steps:
+   i)   Run "mvn eclipse:eclipse" from UID_CLIENT_PROJECT_HOME directory.
+   ii)  Launch Eclipse and create a new workspace.
+   iii) Right click in an empty area in "Project Explorer", and select menu option "Import...".
+   iv)  In the "Import" dialog, select option "General -> Existing project into workspace",
+        and browse to directory UID_CLIENT_PROJECT_HOME for option "Select root directory:".
+        Click "Finish"
+   v)   All the projects will be imported in Eclipse.
+        If you see build errors complaining that lots of JARs are missing in build path, then, that is because
+		we use Maven and all the JARs are include as a relative path to "M2_REPO" class path variable.  To fix this,
+		do the following steps:
+		  a) Select menu "Window -> Preferences".
+		  b) Select the option " Java -> Build Path -> Classpath Variables" in the "Preferences" dialog.
+		  c) Create a new variable with name "M2_REPO" and its value should be the path of your local Maven Repository.
+		     By default, it will be "C:\Users\<your-windows-user-id>\.m2\repository". Example: C:\Users\Administrator\.m2\repository.
+   vi)  If you have project that provides biometric integration API implementation, you will have to add it to the class path of
+        the "uidai-sample-gui-app" project.  Also, update the value of field, biometricAPIImplementationClass, in the SampleClientMainFrame.java
+		to the value of the class that implements the API.
+   vi)  Select the "SampleClientMainFrame.java" file from "uidai-sample-gui-app" project
+        and run it as a "Java" application.
+
+   After launching the application, Use menu "Edit->Preferences" and modify values as needed.

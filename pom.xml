@@ -1,0 +1,58 @@
+<!-- DISCLAIMER: The sample code or utility or tool described herein is provided 
+	on an "as is" basis, without warranty of any kind. UIDAI does not warrant 
+	or guarantee the individual success developers may have in implementing the 
+	sample code on their environment. UIDAI does not warrant, guarantee or make 
+	any representations of any kind with respect to the sample code and does 
+	not make any representations or warranties regarding the use, results of 
+	use, accuracy, timeliness or completeness of any data or information relating 
+	to the sample code. UIDAI disclaims all warranties, express or implied, and 
+	in particular, disclaims all warranties of merchantability, fitness for a 
+	particular purpose, and warranties related to the code, or any service or 
+	software related thereto. UIDAI is not responsible for and shall not be liable 
+	directly or indirectly for any direct, indirect damages or costs of any type 
+	arising out of use or any action taken by you or others related to the sample 
+	code. THIS IS NOT A SUPPORTED SOFTWARE. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>in.gov.uidai</groupId>
+	<artifactId>auth-client-demo-application</artifactId>
+	<name>Aadhaar Authentication Reference Sample Application</name>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+
+	<modules>
+		<module>uidai-biometric-integration-api</module>
+		<module>uidai-auth-xsd-model</module>
+		<module>uidai-auth-proto-model</module>
+		<module>uidai-auth-client</module>
+		<module>uidai-sample-gui-app</module>
+	</modules>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+				</configuration>
+				
+				<executions>
+					<execution>
+						<id>aggregate</id>
+						<goals>
+							<goal>aggregate</goal>
+						</goals>
+						<phase>site</phase>
+						<configuration>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+</project>

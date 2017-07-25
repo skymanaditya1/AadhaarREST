@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/auth-client-demo-application.iml" filepath="$PROJECT_DIR$/auth-client-demo-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidai-auth-client/uidai-auth-client.iml" filepath="$PROJECT_DIR$/uidai-auth-client/uidai-auth-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidai-auth-proto-model/uidai-auth-proto-model.iml" filepath="$PROJECT_DIR$/uidai-auth-proto-model/uidai-auth-proto-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidai-auth-xsd-model/uidai-auth-xsd-model.iml" filepath="$PROJECT_DIR$/uidai-auth-xsd-model/uidai-auth-xsd-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidai-biometric-integration-api/uidai-biometric-integration-api.iml" filepath="$PROJECT_DIR$/uidai-biometric-integration-api/uidai-biometric-integration-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uidai-sample-gui-app/uidai-sample-gui-app.iml" filepath="$PROJECT_DIR$/uidai-sample-gui-app/uidai-sample-gui-app.iml" />
+    </modules>
+  </component>
+</project>
